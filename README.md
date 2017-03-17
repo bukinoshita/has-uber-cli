@@ -28,6 +28,10 @@ $ has-uber --help
 
 - [has-uber](https://github.com/bukinoshita/has-uber) — :car: Check if Uber is available in your city
 
+## Demo
+
+<img src="https://cldup.com/Yqq_LG1H20.gif"/>
+
 ## License
 
 [MIT](https://raw.githubusercontent.com/bukinoshita/has-uber-cli/master/LICENSE) &copy; Bu Kinoshita
