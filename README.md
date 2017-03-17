@@ -24,13 +24,13 @@ $ has-uber --help
     -v, --version      Show version
 ```
 
-## Related
-
-- [has-uber](https://github.com/bukinoshita/has-uber) — :car: Check if Uber is available in your city
-
 ## Demo
 
 <img src="https://cldup.com/Yqq_LG1H20.gif"/>
+
+## Related
+
+- [has-uber](https://github.com/bukinoshita/has-uber) — :car: Check if Uber is available in your city
 
 ## License
 
