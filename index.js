@@ -29,7 +29,6 @@ const cli = meow(`
 updateNotifier({pkg: cli.pkg}).notify()
 
 const run = () => {
-
   if (cli.input[0]) {
     const place = cli.input[0]
     const pretty = titleCase(place)
