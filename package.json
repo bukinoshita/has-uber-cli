@@ -11,8 +11,9 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
-    "has-uber": "^0.0.2",
+    "has-uber": "^0.0.3",
     "meow": "^3.7.0",
+    "ora": "^1.2.0",
     "update-notifier": "^2.1.0"
   },
   "scripts": {

@@ -4,6 +4,7 @@
 const meow = require('meow')
 const updateNotifier = require('update-notifier')
 const hasUber = require('has-uber')
+const ora = require('ora')
 const chalk = require('chalk')
 
 const titleCase = require('./lib/title-case')
@@ -28,13 +29,24 @@ const cli = meow(`
 updateNotifier({pkg: cli.pkg}).notify()
 
 const run = () => {
+
   if (cli.input[0]) {
     const place = cli.input[0]
     const pretty = titleCase(place)
+    const spinner = ora(`Verifying Ubers in ${pretty}`)
+    spinner.start()
 
     hasUber(place)
-      .then(() => console.log(`${chalk.green('✔')} Uber is available in ${pretty}`))
-      .catch(() => console.log(`${chalk.red('✖')} Uber is not available in ${pretty}`))
+      .then(city => {
+        spinner.stop()
+
+        if (city[0]) {
+          return console.log(`${chalk.green('✔')} Uber is available in ${pretty}`)
+        }
+
+        return console.log(`${chalk.red('✖')} Uber is not available in ${pretty}`)
+      })
+      .catch(err => console.log(err))
   } else {
     cli.showHelp()
   }
