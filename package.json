@@ -1,6 +1,6 @@
 {
   "name": "has-uber-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Check if Uber is available in your city with CLI",
   "main": "index.js",
   "repository": {
@@ -16,7 +16,13 @@
     "ora": "^1.2.0",
     "update-notifier": "^2.1.0"
   },
-  "keywords": ["uber", "has-uber", "cli", "uber-cli", "available"],
+  "keywords": [
+    "uber",
+    "has-uber",
+    "cli",
+    "uber-cli",
+    "available"
+  ],
   "scripts": {
     "test": "xo"
   },
