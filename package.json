@@ -16,6 +16,7 @@
     "ora": "^1.2.0",
     "update-notifier": "^2.1.0"
   },
+  "keywords": ["uber", "has-uber", "cli", "uber-cli", "available"],
   "scripts": {
     "test": "xo"
   },

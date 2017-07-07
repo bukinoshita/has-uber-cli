@@ -2,10 +2,12 @@
 
 > :car: Check if Uber is available in your city with CLI
 
+
 ## Install
 ```bash
 $ npm install -g has-uber-cli
 ```
+
 
 ## Usage
 ```bash
@@ -24,14 +26,16 @@ $ has-uber --help
     -v, --version      Show version
 ```
 
+
 ## Demo
 
 <img src="https://cldup.com/0k64sAndrQ.gif"/>
+
 
 ## Related
 
 - [has-uber](https://github.com/bukinoshita/has-uber) — :car: Check if Uber is available in your city
 
-## License
 
-[MIT](https://raw.githubusercontent.com/bukinoshita/has-uber-cli/master/LICENSE) &copy; Bu Kinoshita
+## License
+MIT © [Bu Kinoshita](https://bukinoshita.io)
