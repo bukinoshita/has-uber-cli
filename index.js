@@ -9,24 +9,29 @@ const chalk = require('chalk')
 
 const titleCase = require('./lib/title-case')
 
-const cli = meow(`
+const cli = meow(
+  `
   Usage:
-    $ has-uber <city>   Check if Uber is available or not
+    $ has-uber <city>     Check if Uber is available or not
+
   Example:
     $ has-uber new-york
     $ has-uber sao-paulo
     $ has-uber toronto
-  Options:
-    -h, --help         Show help options
-    -v, --version      Show version
-`, {
-  alias: {
-    h: 'help',
-    v: 'version'
-  }
-})
 
-updateNotifier({pkg: cli.pkg}).notify()
+  Options:
+    -h, --help            Show help options
+    -v, --version         Show version
+`,
+  {
+    alias: {
+      h: 'help',
+      v: 'version'
+    }
+  }
+)
+
+updateNotifier({ pkg: cli.pkg }).notify()
 
 const run = () => {
   if (cli.input[0]) {
@@ -40,14 +45,16 @@ const run = () => {
         spinner.stop()
 
         if (city[0]) {
-          return console.log(`${chalk.green('✔')} Uber is available in ${pretty}`)
+          return console.log(
+            `${chalk.green('✔')} Uber is available in ${pretty}`
+          )
         }
 
-        return console.log(`${chalk.red('✖')} Uber is not available in ${pretty}`)
+        return console.log(
+          `${chalk.red('✖')} Uber is not available in ${pretty}`
+        )
       })
       .catch(err => console.log(err))
-  } else {
-    cli.showHelp()
   }
 }
 
