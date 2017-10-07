@@ -6,8 +6,7 @@ const updateNotifier = require('update-notifier')
 const hasUber = require('has-uber')
 const ora = require('ora')
 const chalk = require('chalk')
-
-const titleCase = require('./lib/title-case')
+const wer = require('wer')
 
 const cli = meow(
   `
@@ -33,29 +32,25 @@ const cli = meow(
 
 updateNotifier({ pkg: cli.pkg }).notify()
 
-const run = () => {
-  if (cli.input[0]) {
-    const place = cli.input[0]
-    const pretty = titleCase(place)
-    const spinner = ora(`Verifying Ubers in ${pretty}`)
-    spinner.start()
+const run = async () => {
+  const input = cli.input[0]
+  const location = input ? input : await wer()
+  const city = input
+    ? location
+    : location.region.replace(/\s+/g, '-').toLowerCase()
+  const spinner = ora(`Verifying Uber in ${city}`)
 
-    hasUber(place)
-      .then(city => {
-        spinner.stop()
+  spinner.start()
 
-        if (city[0]) {
-          return console.log(
-            `${chalk.green('✔')} Uber is available in ${pretty}`
-          )
-        }
+  const uber = await hasUber(city)
 
-        return console.log(
-          `${chalk.red('✖')} Uber is not available in ${pretty}`
-        )
-      })
-      .catch(err => console.log(err))
+  spinner.stop()
+
+  if (uber.length > 0) {
+    return console.log(`${chalk.green('✔')} Uber is available in ${city}`)
   }
+
+  return console.log(`${chalk.red('✖')} Uber is not available in ${city}`)
 }
 
 run(cli)

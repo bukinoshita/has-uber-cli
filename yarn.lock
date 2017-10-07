@@ -1883,6 +1883,12 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
 
+wer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wer/-/wer-1.0.0.tgz#4f8a7ba2d09b204a0b222e451ea5a0a32932896b"
+  dependencies:
+    got "^6.7.1"
+
 which@^1.2.8, which@^1.2.9:
   version "1.2.12"
   resolved "https://registry.yarnpkg.com/which/-/which-1.2.12.tgz#de67b5e450269f194909ef23ece4ebe416fa1192"
