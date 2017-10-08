@@ -29,7 +29,7 @@ $ has-uber --help
 
 ## Demo
 
-<img src="https://cldup.com/0k64sAndrQ.gif"/>
+<img src="demo.gif"/>
 
 
 ## Related
