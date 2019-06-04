@@ -1168,9 +1168,9 @@ has-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.0.tgz#ba1a8f1af2a0fc39650f5c850367704122063b44"
 
-has-uber@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/has-uber/-/has-uber-0.0.3.tgz#3f9b9eb5a448a310412784e3f1b185c964c242ca"
+has-uber@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/has-uber/-/has-uber-0.0.4.tgz#6ba0f22ccc777b69488a65d4321b17ac2255030e"
 
 has-value@^0.3.1:
   version "0.3.1"

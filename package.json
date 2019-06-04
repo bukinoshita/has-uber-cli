@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "chalk": "^2.0.0",
-    "has-uber": "^0.0.3",
+    "has-uber": "^0.0.4",
     "meow": "^5.0.0",
     "ora": "^3.0.0",
     "update-notifier": "^3.0.0",
