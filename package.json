@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "2.6.0",
-    "xo": "0.17.1"
+    "xo": "0.24.0"
   },
   "xo": {
     "extends": [
