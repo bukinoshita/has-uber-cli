@@ -31,8 +31,8 @@
     "wer": "^1.0.0"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^2.6.0",
-    "xo": "^0.17.1"
+    "eslint-config-prettier": "2.6.0",
+    "xo": "0.17.1"
   },
   "xo": {
     "extends": [
