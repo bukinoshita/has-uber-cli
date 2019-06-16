@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-'use strict'
 
+// Packages
 const meow = require('meow')
 const updateNotifier = require('update-notifier')
 const hasUber = require('has-uber')
@@ -11,16 +11,16 @@ const wer = require('wer')
 const cli = meow(
   `
   Usage:
-    $ has-uber <city>     Check if Uber is available or not
+    $ has-uber <city>         Check if Uber is available or not
 
   Example:
-    $ has-uber new-york
+    $ has-uber
     $ has-uber sao-paulo
     $ has-uber toronto
 
   Options:
-    -h, --help            Show help options
-    -v, --version         Show version
+    -h, --help                Show help options
+    -v, --version             Show version
 `,
   {
     alias: {
@@ -35,9 +35,7 @@ updateNotifier({ pkg: cli.pkg }).notify()
 const run = async () => {
   const input = cli.input[0]
   const location = input ? input : await wer()
-  const city = input
-    ? location
-    : location.region.replace(/\s+/g, '-').toLowerCase()
+  const city = input ? location : location.region.replace(/\s+/g, '-').toLowerCase()
   const spinner = ora(`Verifying Uber in ${city}`)
 
   spinner.start()
@@ -46,7 +44,7 @@ const run = async () => {
 
   spinner.stop()
 
-  if (uber.length > 0) {
+  if (uber) {
     return console.log(`${chalk.green('✔')} Uber is available in ${city}`)
   }
 

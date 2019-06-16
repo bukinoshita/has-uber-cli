@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "Check if Uber is available in your city with CLI",
   "main": "index.js",
-  "repository": {
-    "url": "git@github.com:bukinoshita/has-uber-cli.git",
-    "type": "git"
-  },
+  "repository": "bukinoshita/has-uber-cli",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
+  "files": [
+    "cli.js"
+  ],
   "keywords": [
     "uber",
     "has-uber",
@@ -16,27 +16,45 @@
     "uber-cli",
     "available"
   ],
-  "scripts": {
-    "test": "xo"
-  },
   "bin": {
-    "has-uber": "index.js"
+    "has-uber": "cli.js"
+  },
+  "scripts": {
+    "test": "ava",
+    "lint": "xo"
   },
   "dependencies": {
-    "chalk": "^2.0.0",
-    "has-uber": "^0.0.4",
+    "chalk": "^2.4.2",
+    "has-uber": "^1.0.0",
     "meow": "^5.0.0",
-    "ora": "^3.0.0",
+    "ora": "^3.4.0",
     "update-notifier": "^3.0.0",
     "wer": "^1.0.0"
   },
   "devDependencies": {
-    "eslint-config-prettier": "5.0.0",
-    "xo": "0.24.0"
+    "ava": "^2.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "execa": "^1.0.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
+    "xo": "^0.24.0"
   },
   "xo": {
     "extends": [
       "prettier"
     ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --semi false --single-quote --write",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
