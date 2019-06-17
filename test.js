@@ -2,6 +2,12 @@
 import test from 'ava'
 import execa from 'execa'
 
+test('it should check uber availability', async t => {
+  const { stdout } = await execa('./cli.js')
+
+  t.truthy(stdout)
+})
+
 test('it should check uber availability in new york', async t => {
   const { stdout } = await execa('./cli.js', ['new-york'])
 

@@ -1,4 +1,4 @@
-# has-uber-cli [![Build Status](https://travis-ci.org/bukinoshita/has-uber-cli.svg?branch=master)](https://travis-ci.org/bukinoshita/has-uber-cli)
+# has-uber-cli [![Build Status](https://travis-ci.org/bukinoshita/has-uber-cli.svg?branch=master)](https://travis-ci.org/bukinoshita/has-uber-cli) [![codecov](https://codecov.io/gh/bukinoshita/has-uber-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/bukinoshita/has-uber-cli)
 
 > :car: Check if Uber is available in your city with CLI
 
