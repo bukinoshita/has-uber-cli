@@ -34,7 +34,7 @@
   "devDependencies": {
     "ava": "2.1.0",
     "eslint-config-prettier": "5.0.0",
-    "execa": "1.0.0",
+    "execa": "2.0.0",
     "husky": "2.5.0",
     "lint-staged": "8.2.1",
     "nyc": "14.1.1",
